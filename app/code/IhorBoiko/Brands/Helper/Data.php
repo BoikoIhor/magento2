@@ -14,6 +14,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
        $this->getAtributeData();
    }
 
+   
    public static function getAtributeName() {
        return 'brand_selector_2';
    }
@@ -66,30 +67,6 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         return self::FixDocumentRoot($path);
     }
 
-		public function getFullDataById($value_id)
-        {
-            $brandDatamodel = $this->_objectManager->get('IhorBoiko\Brands\Model\Brand')->getCollection();
-            $brandDatamodel->addFieldToFilter('entity_id', array('eq' => $value_id));
-            $brandDataArray = $brandDatamodel->getData();
-            $brandDataArray = reset($brandDataArray);
-
-            if (!empty($brandDataArray['picture'])) {
-                $brandDataArray['picture'] = self::getAbsoluteMediaPath($brandDataArray['picture']);
-            }
-            return $brandDataArray;
-        }
-       
-       public function getFullDataByProduct(\Magento\Catalog\Model\Product $_product) {
-	       $value_id=$_product->getData($this->getAtributeName());
-	       return $this->getFullDataById($value_id);
-       }
-
-       /*
-    public function getFullDataLikeCollection($block) {
-        $block->modelBrandFactory
-        $value_id=$_product->getData($this->getAtributeName());
-        return $this->getFullDataById($value_id);
-    }*/
 
     public function getCorrectBrand($block, &$originalBlock){
 
