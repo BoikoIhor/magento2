@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+	$brand_array=$block->getData('brand');
+	if(!empty($brand_array)) {?>
+        <style>
+            .brand_block {
+                width:100%;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+            .brand_block span {
+                margin-left: 10px;
+            }
+            .brand_block .name {
+                color:#333333;
+                font-weight: bold;
+            }
+            .brand_block .name {
+                color:#333333;
+                font-weight: bold;
+            }
+            .brand_block img {
+                max-width: 80px;
+            }
+        </style>
+        <span class="brand_block"><img src="<?=$brand_array['picture'];?>" /><span class="name"><?=$brand_array['name'];?></span></span>
+<?php } ?>

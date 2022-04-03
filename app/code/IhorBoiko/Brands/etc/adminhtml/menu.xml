@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="IhorBoiko_Brands::parent" title="Vendors" module="IhorBoiko_Brands" sortOrder="100" resource="IhorBoiko_Brands::parent"/>
+		<add id="IhorBoiko_Brands::brand" title="Manage vendors list" module="IhorBoiko_Brands" sortOrder="20" parent="IhorBoiko_Brands::parent" action="brands/brand" resource="IhorBoiko_Brands::brand"/>
+
+    </menu>
+</config>

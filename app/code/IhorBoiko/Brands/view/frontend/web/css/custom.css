@@ -1,0 +1,20 @@
+.brand_block {
+	width:100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.brand_block span {
+	margin-left: 10px;
+}
+.brand_block .name {
+	color:#333333;
+	font-weight: bold;
+}
+.brand_block .name {
+	color:#333333;
+	font-weight: bold;
+}
+.brand_block img {
+	max-width: 80px;
+}

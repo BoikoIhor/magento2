@@ -1,0 +1,16 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="brand_list2" resource="default" engine="innodb" comment="Vendors list">
+	    <column xsi:type="int" name="entity_id" unsigned="true" nullable="true" identity="true" comment="Entity ID"/>
+	    <column xsi:type="datetime" name="created_at" on_update="false" nullable="true" comment="Created at"/>
+	
+		<column xsi:type="varchar" length="255" name="name" nullable="false" comment="Name"/>
+		<column xsi:type="varchar" length="255" name="picture" nullable="true" comment="Picture"/>
+		<column xsi:type="varchar" length="255" name="description" nullable="true" comment="Description"/>
+		
+		<column xsi:type="varchar" length="2" name="visibility" nullable="true" comment="Visibility"/>
+		
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+	        <column name="entity_id"/>
+	    </constraint>
+	</table>
+</schema>

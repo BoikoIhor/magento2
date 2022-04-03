@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+	<preference for="IhorBoiko\Brands\Api\IhorBoikoBrandsRepositoryInterface" type="IhorBoiko\Brands\Model\BrandRepositoryModel" />
+	<preference for="IhorBoiko\Brands\Api\Data\IhorBoikoBrandsInterface" type="IhorBoiko\Brands\Model\Brand" />
+	<preference for="IhorBoiko\Brands\Api\Data\IhorBoikoBrandsSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+
+	<preference for="Magento\Catalog\Model\Product" type="IhorBoiko\Brands\Model\Magento\Catalog\Product" />
+
+	<type name="Magento\Catalog\Block\Product\View\Description">
+		<plugin disabled="false" name="afterProductDescription" sortOrder="10" type="IhorBoiko\Brands\Plugin\View\Description"/>
+	</type>	
+	<type name="Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare">
+		<plugin disabled="false" name="afterProductCompare" sortOrder="10" type="IhorBoiko\Brands\Plugin\ListProductCompare"/>
+	</type>
+</config>
